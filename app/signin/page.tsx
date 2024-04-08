@@ -16,7 +16,7 @@ export default function Home() {
 
     if(session.status == "authenticated") {
 
-        if((user?.codeforcesHandle == null || user?.username == null)) {
+        if(session.data.user && (user?.codeforcesHandle == null || user?.username == null)) {
             redirect("/profile");
         }
         else {

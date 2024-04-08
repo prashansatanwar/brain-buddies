@@ -1,6 +1,6 @@
-import { Submission } from "@/models/Submission";
-import { User } from "@/models/User";
-import { Row } from "@/models/Row";
+import type { Submission } from "@/models/Submission";
+import type { User } from "@/models/User";
+import type { Row } from "@/models/Row";
 import create from "zustand";
 
 interface UserStoreState {

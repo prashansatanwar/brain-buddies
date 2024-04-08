@@ -1,6 +1,6 @@
 "use client"
 
-import { User } from '@/models/User';
+import type { User } from '@/models/User';
 import { useUserStore } from '@/stores/userStore';
 import { useSession } from 'next-auth/react';
 import { useRouter } from "next/navigation";

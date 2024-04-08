@@ -4,7 +4,6 @@ import { JWT } from 'next-auth/jwt'
 import jwt from "jsonwebtoken" 
 import GoogleProvider from 'next-auth/providers/google'
 import { prisma } from '@/app/prismaClient'
-import { User } from '@/models/User'
 
 const MAX_AGE = 1 * 24 * 60 * 60
 

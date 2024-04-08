@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 252, 247;
+  --background-end-rgb: 255, 252, 247;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255; 
+    --background-start-rgb: 34, 40, 46; 
+    --background-end-rgb: 34, 40, 46;
+  }
+}
+
+/* slightly darker than bg 1E2328, 161A1E */
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+td{
+  padding: 0em 1em;
+  height: 6em;
+  /* overflow: hidden; */
+}
+
+th{
+  padding: 1em 1em;
+  text-align: left;
+  /* height: 6em; */
+  
+}
+
+thead {
+  padding: 3em 1em;
+  background-color: #0d1013;
+  border-bottom: 1px solid white;
+  /* height: 7em; */
+}
+
+/* tr {
+  max-height: 6em;
+} */
+
+tr:nth-child(even) {
+  background-color: #161A1E;
+}
+
+input {
+  background-color: transparent;
+  
+}
+
+/* table, th, td {
+  border: 2px solid white;
+} */
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

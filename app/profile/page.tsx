@@ -53,7 +53,7 @@ export default function Profile() {
         }
 
         setCurrUser(user);
-    }, [session, fetchStatus]);
+    }, [session.status, fetchStatus]);
 
     return (
 

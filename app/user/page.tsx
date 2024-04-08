@@ -17,7 +17,7 @@ export default function Users() {
       fetchAllUsers();
       setFetch(false);
     }
-  }, [fetch]);
+  }, [fetch, fetchAllUsers]);
 
   useEffect(() => {
     if (session.status === "loading" || fetchStatus == "fetching") {
@@ -26,7 +26,7 @@ export default function Users() {
     else {
       setIsLoading(false);
     }
-  }, [session,fetchStatus]);
+  }, [session.status,fetchStatus]);
 
   async function handleConnect(Otherid: string) {
     const userBuddies = user?.buddies;

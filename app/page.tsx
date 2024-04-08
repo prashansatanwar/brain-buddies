@@ -22,7 +22,7 @@ export default function Home() {
       fetchAllQuestions({username: user.username||"", codeforcesHandle:user.codeforcesHandle||""}, user.buddies || [])
       setFetch(false);
     }
-	}, [fetch]);
+	}, [fetch, fetchAllQuestions, user]);
 
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function Home() {
     else {
       setIsLoading(false);
     }
-  }, [session, fetchStatus]);
+  }, [session.status, fetchStatus]);
 
   function handleRefresh() {
     setFetch(true);

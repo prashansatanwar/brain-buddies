@@ -21,7 +21,7 @@ export default function User() {
         else {
           setIsLoading(false);
         }
-    }, [session, fetchStatus]);
+    }, [session.status, fetchStatus]);
 
     if (session.status === "authenticated") {
         return (

@@ -19,7 +19,7 @@ export default function MyQuestions() {
             fetchMyQuestions(user.codeforcesHandle||"");
             setFetch(false);
         }
-    }, [fetch]);
+    }, [fetch, user, fetchMyQuestions]);
 
     useEffect(() => {
         if (session.status === "loading" || fetchStatus == "fetching") {
@@ -28,7 +28,7 @@ export default function MyQuestions() {
         else {
           setIsLoading(false);
         }
-      }, [fetchStatus]);
+      }, [session.status, fetchStatus]);
     
     function handleRefresh() {
         setFetch(true);

@@ -14,9 +14,8 @@ export default function Home() {
 
     const { user } = useUserStore();
 
-    if(session.status == "authenticated") {
-
-        if(session.data.user && (user?.codeforcesHandle == null || user?.username == null)) {
+    if(session.status == "authenticated" && user) {
+        if(user?.codeforcesHandle == null || user?.username == null) {
             redirect("/profile");
         }
         else {

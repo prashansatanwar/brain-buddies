@@ -5,10 +5,12 @@ import { useEffect, useState } from "react";
 import { useUserStore } from '@/stores/userStore';
 import { Alert } from "@mui/material";
 import Loading from "@/components/Loading";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
 
   const session = useSession();
+  const router = useRouter();
 
   const [fetch, setFetch] = useState(false);
 
@@ -139,5 +141,8 @@ export default function Home() {
           }      
       </>
     );
+  }
+  else {
+    router.push("/signin");
   }
 }

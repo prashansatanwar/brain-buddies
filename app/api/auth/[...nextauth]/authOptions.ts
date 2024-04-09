@@ -10,11 +10,12 @@ const MAX_AGE = 1 * 24 * 60 * 60
 export const authOptions: NextAuthOptions = {
 providers: [
     GoogleProvider({
-    clientId: process.env.GOOGLE_CLIENT_ID!,
-    clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
 ],
-debug: true,
+// debug: true,
+secret: process.env.NEXTAUTH_SECRET,
 session: {
     strategy: 'jwt',
     maxAge: MAX_AGE,

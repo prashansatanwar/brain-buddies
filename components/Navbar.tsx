@@ -1,8 +1,7 @@
 "use client"
 
-import { useSession, signOut } from 'next-auth/react'
+import { useSession, signOut } from 'next-auth/react';
 import Link from 'next/link';
-import { redirect } from 'next/navigation';
 import React, { useState } from 'react'
 
 
@@ -25,7 +24,7 @@ function Navbar() {
           <Link href={'/user'} className='px-2'> Connect </Link>
         {/* </span> */}
         <span className='ml-auto pl-4'>
-          <img src={session?.data?.user?.image?.toString()} referrerPolicy="no-referrer"
+          <img src={session?.data?.user?.image?.toString()} referrerPolicy="no-referrer" alt=''
                 className='h-9 rounded-[100%] border-2 border-gray-500 hover:border-gray-300 hover:cursor-pointer hover:shadow-sm'
                 onClick={toggleMenu}/> 
           {open &&

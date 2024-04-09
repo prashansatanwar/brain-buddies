@@ -2,7 +2,6 @@
 
 import type { User } from '../../models/User';
 import { useSession } from 'next-auth/react';
-import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from 'react'
 import { useUserStore } from '@/stores/userStore';
 import { Alert } from "@mui/material";
@@ -10,7 +9,6 @@ import Loading from '@/components/Loading';
 
 export default function Profile() {
     const session = useSession();
-    const router = useRouter();
 
     const { user, updateUser, fetchStatus } = useUserStore();
 
@@ -53,7 +51,7 @@ export default function Profile() {
         }
 
         setCurrUser(user);
-    }, [session.status, fetchStatus]);
+    }, [session.status, fetchStatus, user]);
 
     return (
 
@@ -70,7 +68,7 @@ export default function Profile() {
                         <div className='bg-gray-700 w-4/5 h-2/3 flex flex-col p-4 rounded-lg'>
         
                             <div className='w-52 md:w-1/4 xl:w-1/5 md:ml-8 mt-4 absolute z-10 flex items-center'>
-                                <img src={currUser.picture} className='w-4/5 aspect-square rounded-lg border-2 '/>
+                                <img src={currUser.picture} className='w-4/5 aspect-square rounded-lg border-2 ' alt={currUser.username || ""}/>
                             </div>
         
                             <div className='h-1/3'></div>

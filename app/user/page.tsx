@@ -74,7 +74,7 @@ export default function Users() {
                     <tbody className='py-6'>
                       {allUsers.map(u => (
                         <tr key={u.id}>
-                          <td><img src={u.picture.toString()} className='h-6 rounded'/></td>
+                          <td><img src={u.picture.toString()} className='h-6 rounded' alt={u.username || ""}/></td>
                           <td className='hover:cursor-pointer'>{u.name}</td>
                           <td>{u.username || " undefined "}</td>
                           <td>

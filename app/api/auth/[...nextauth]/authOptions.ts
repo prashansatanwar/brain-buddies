@@ -64,23 +64,19 @@ callbacks: {
         })
         // console.log(existingUser)
         if (!existingUser) {
-        const newUser = await prisma.user.create({
-            data: {
-                id: user.id!,
-                email: user.email!,
-                username: "",
-                name: user.name!,
-                picture: user.image!,
-                codeforcesHandle: "",
-                buddies: [],
+          const newUser = await prisma.user.create({
+              data: {
+                  id: user.id!,
+                  email: user.email!,
+                  username: "",
+                  name: user.name!,
+                  picture: user.image!,
+                  codeforcesHandle: "",
+                  buddies: [],
 
-            }
+              }
 
-        })
-
-
-        // console.log(newUser);
-        // console.log('!!! newUser ', newUser)
+          })
         }
     }
 

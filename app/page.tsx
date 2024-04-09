@@ -142,7 +142,9 @@ export default function Home() {
       </>
     );
   }
-  else {
+  else if (typeof window !== 'undefined') {
     router.push("/signin");
   }
+
+  return null;
 }

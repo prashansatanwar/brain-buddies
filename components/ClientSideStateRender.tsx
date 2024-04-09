@@ -15,7 +15,7 @@ function ClientSideStateRender() {
         fetchInitialData(session.data.user.id);
       }
 
-    }, [session]);
+    }, [session, fetchInitialData]);
 
   return (
     <></>

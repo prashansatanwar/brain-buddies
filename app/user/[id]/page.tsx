@@ -33,7 +33,7 @@ export default function User() {
                             <div className='flex min-h-full'>
                                 <div className='w-1/4 my-4 mx-2 px-2 py-4 bg-gray-700 rounded-lg flex flex-col'>
                                     <div className='w-full my-2 flex justify-center'>
-                                        <img src={user.picture} className='w-3/4 aspect-square rounded-md'/>
+                                        <img src={user.picture} className='w-3/4 aspect-square rounded-md' alt={user.username || ""}/>
                                     </div>
         
                                     <div className='w-full my-2 text-center font-semibold text-xl'>

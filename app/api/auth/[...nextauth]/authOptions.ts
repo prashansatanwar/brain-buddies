@@ -65,17 +65,21 @@ callbacks: {
         })
         // console.log(existingUser)
         if (!existingUser) {
+          
+          const idx = user.email?.indexOf('@');
+          
           const newUser = await prisma.user.create({
               data: {
                   id: user.id!,
                   email: user.email!,
-                  username: "",
+                  username: user.email!.substring(0,idx),
                   name: user.name!,
                   picture: user.image!,
                   codeforcesHandle: "",
                   buddies: [],
 
               }
+
 
           })
         }

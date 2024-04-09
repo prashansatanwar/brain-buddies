@@ -108,7 +108,7 @@ callbacks: {
 },
 
 pages: {
-    signIn: '/signIn',
+    signIn: '/signin',
 },
 }
 
